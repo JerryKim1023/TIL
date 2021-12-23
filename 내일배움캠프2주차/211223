@@ -17,6 +17,7 @@ object-fit: cover;
 border-radius: 50%;   px와 무슨 차이??
 position: absolute;
 
+<hr>로 라인 사용 가능
 
 em, rem, %
 
