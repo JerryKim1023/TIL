@@ -1,0 +1,94 @@
+//
+가운데 세로 정렬(column) 가로정렬(row)
+	display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+//
+
+
+
+width : 1200px;
+---->>> max-width : 1200px;
+	width: 95%;
+로 모바일 환경에도 적용 가능
+
+
+*Template literals
+function q3() {
+    let txt = $('#input-q3').val()
+    let temp_html = `<li>${txt}</li>`
+    $('#names-q3').append(temp_html)   
+기본적인 구문(?)   
+입력된 값 밸류를 txt변수지정해서 입력된 값이 
+제이쿼리를 이용하여 append 되게 함.
+
+
+'==' 를 써야하는데 자꾸 '='를 쓰는 버릇이 있음. 그래서 오류가 남.
+
+
+people = [{'name': 'bob', 'age': 20},
+          {'name': 'carry', 'age': 38},
+          {'name': 'john', 'age': 7},
+          {'name': 'smith', 'age': 17},
+          {'name': 'ben', 'age': 27}]
+
+for person in people:
+    if person['age'] > 20:
+        print(person['name'])
+
+
+자바스크립트에서는 딕셔너리에서 이렇게 가져오는데 파이썬이 직관적인 느낌이 있다.
+for (let i = 0 ; i < wizardsInfo.length ; i++) {
+	if (wizardsInfo[i]['age'] < 70) {
+		console.log(wizardsInfo[i]['name']);
+	}
+}
+
+파이썬 패키지 설치 = 외부 라이브러리 설치
+
+requests  == 일종의 Ajax 같은 역할을 하는 친구
+
+headers의 역할???
+
+DB에 정렬되어있는 순서를 index 라고 부른다
+
+
+https://cloud.mongodb.com/v2#/preferences/organizations
+
+test / sparta
+
+
+
+*크롤링 구조
+
+//import requests
+from bs4 import BeautifulSoup//  
+***************Ajax 역할을 위한 requests와 db에서 데이터를 가져와 쓰는 bs4 패키치 설치
+
+//from pymongo import MongoClient
+client = MongoClient('mongodb+srv://test:sparta@cluster0.5ufkt.mongodb.net/Cluster0?retryWrites=true&w=majority')
+db = client.dbsparta//
+***************몽고디비 클라우드에 있는 데이터베이스 활용
+
+headers = {'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'}
+data = requests.get('https://www.genie.co.kr/chart/top200?ditc=M&rtm=N&ymd=20210701',headers=headers)
+
+soup = BeautifulSoup(data.text, 'html.parser')
+
+//
+trs = soup.select('#body-content > div.newest-list > div > table > tbody > tr')
+
+for tr in trs:
+        rank = tr.select_one('td.number').text[0:2].strip()
+        title = tr.select_one('td.info > a.title.ellipsis').text.strip()
+        artist = tr.select_one('td.info > a.artist.ellipsis').text
+        print(rank, title, artist)
+// 
+***************크롤링할 사이트에서 copy selector 기능으로 가져와서 반복문을 통해 내 입맛에 맞게 렌더링 할 수 있다.
+
+팀 토론 주제 숙제
+
+UI , UX 차이
+
+라이브러리,프레임워크의 차이 와 라이브러리랑 프레임워크에는 무엇이 있는가??

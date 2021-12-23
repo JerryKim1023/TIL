@@ -18,9 +18,11 @@ border-radius: 50%;   px와 무슨 차이??
 position: absolute;
 
 <hr>로 라인 사용 가능
+<strong>태그 쓰면 글씨만 굵어지는 게 아니라 지니나 글자 읽어주는 기계가 말을 쎄게 말해줘요
 
 em, rem, %
 
+margin: 0 auto; 중앙 정렬에 자주 씀
 
 git-lfs
 개발자답게 질문하기
@@ -32,3 +34,7 @@ git init    git 연동해서 이니셜라이징 하기
 la 
 open . 
 cat config
+
+fontawesome, bootstrap 금지
+
+display : flex;     block; inline;  이 기본 플렉스는 빠르게 만들기 위해서.    div는 블록태그    span은 인라인 태그   인라인 태그는 마진오토가 안 먹음.   인라인태그인 애들을 디스플레이 블록 처리하면 됨.  그런데도 마진오토가 안 먹으면 가로 세로 값이 지정이 안 되서 그럼.
