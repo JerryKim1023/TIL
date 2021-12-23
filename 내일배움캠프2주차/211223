@@ -1,0 +1,33 @@
+포지션 앱솔루트는 왠만하면 안쓰는게 관행
+
+랠러티브 포지션을 쓸 것 다른 부분은 마진 패딩으로 간격설정 가능
+
+세개 아이콘은 플렉스라는 개념을 더 깊게 공부해서 배치할 것
+나와의 채팅,프로필,카카오스토리
+
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+justify-content: space-around;
+font-size: 10pt;
+top: 450px;
+left: 190px;
+object-fit: cover;
+border-radius: 50%;   px와 무슨 차이??
+position: absolute;
+
+
+em, rem, %
+
+
+git-lfs
+개발자답게 질문하기
+개발자답게 검색하기
+
+
+mkdir   폴더만들기
+git init    git 연동해서 이니셜라이징 하기
+la 
+open . 
+cat config
