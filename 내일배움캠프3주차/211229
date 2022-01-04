@@ -4,3 +4,11 @@ box-sizing: border-box;
 
 background-origin: border-box;
             background-clip: content-box, border-box;
+
+flex는 상속이 안 되므로 각각의 태그에 먹여줘야함.
+
+css 작성시 전체 값에 margin : 0; padding : 0;
+
+을 먹여주고 그 다음에 브라우저 F12나 검사창에서
+
+조절하면서 적용해보면 맞추기 쉽다.
