@@ -1,0 +1,13 @@
+floating point 소수점 머신러닝에선,ㄴ 소수점 자주 씀
+
+회귀 (Regression)
+
+분류 (Classification)
+
+입력값에 정답을 하나씩 입력해주는 작업을 하게 되는 경우가 있는데 그 과정을 노가다 라벨링(Labeling, 레이블링) 또는 어노테이션(Annotation)
+
+https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fcc2c294b-44bf-415f-af09-2077a2bcaf9a%2FUntitled.png?table=block&id=ed431ed7-59ca-454f-a504-97fdac19234f&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=ca316750-1b7c-42a7-b7a4-1a715f330538&cache=v2
+
+선형회귀 가설 1-5?? 그 언저리에 있음
+
+GPU??  TPU???
