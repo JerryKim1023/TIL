@@ -1,0 +1,28 @@
+선형회귀 가설 1-5?? 그 언저리에 있음
+
+GPU??  TPU???
+
+# 아래 4개는 기본적으로 씀
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+from tensorflow.keras.optimizers import Adam, SGD
+import numpy as np
+
+
+#csv를 읽을 때 사용
+import pandas as pd
+#그래프를 그릴 때 사용
+import matplotlib.pyplot as plt 
+#그래프를 그릴 때 사용
+import seaborn as sns
+# 사이키런이란 머신러닝을 도와주는패키지 사용, train_test_split이라는 굉장히 훌륭한 클래스 사용 트레인세트랑 테스트 세트를 분리
+from sklearn.model_selection import train_test_split
+
+# 케라스는 넘파이 어레이로 바꿔준 값만 취급해서 데이터를 저렇게 졍의해줌.
+x_data = np.array(df[['TV']], dtype=np.float32)
+y_data = np.array(df['Sales'], dtype=np.float32)
+
+Optimizer = Adam   /   요즘에는 묻지도 따지지도 말고 옵티마이저로 아담을 써라라고함.
+옵티마이저란??  SGD는 무엇??
+lr 수치  /  learning rate 는 무엇??  0.1  0.01?? 차이??
+loss:mean_absolute_error 로 바꿔보기?
