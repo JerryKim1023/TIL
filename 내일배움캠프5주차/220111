@@ -1,5 +1,8 @@
 div 감싸는 a태그 href 경로상으로 갈 때 새탭에서 열리는 거랑 그냥 현재창에서 열리는 거 설정 따로 가능??
 
+정답 : <a href="https://www.naver.com" target="_blank">
+target="_blank" 요 놈을 추가해주면 새탭에서 열린다!
+
 
 객체지향?
 
