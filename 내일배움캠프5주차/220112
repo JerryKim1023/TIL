@@ -1,0 +1,18 @@
+ui 팔레트 색상 수정
+
+부트스트랩 가져오는 곳에서
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  
+CORS 속성 설정을 해줘야 잘 작동한다.
+crossorigin="anonymous"
+
+
+bs4 크롤링용 라이브러리/ pandas 데이터분석용 라이브러리
+
+https://pypi.org/project/google_images_download/
+구글 이미지 다운로드 크롤링 라이브러리
+
+https://teachablemachine.withgoogle.com/
+이미지 파일 가지고 자동학습을 시켜줌. 캐글 복잡한 코드없이 
+간단하게 모델화 시켜줌
