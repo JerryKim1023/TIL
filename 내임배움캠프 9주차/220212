@@ -1,0 +1,45 @@
+class 상속 인자(파라미터?)로 models.Model의 뜻은?? 아네 BaseModel 넣었던 거는 BaseModel import 해와서 상속했었는데.... / 2-10에서  
+
+인자로 Like를 받아온다는 뜻임 그래서 아래에 리턴값으로 Like 값들을 가져옴.
+def do_like(user_id: int, article_id: int) -> Like:   
+    return Like.objects.create(user_id=user_id, article_id=article_id)
+
+SRP원칙
+
+앱 안에 services 라는 파이썬 패키지가 서비스 레이어임? 아니면 services 패키지 안에 like_service.py 가 서비스 레이어임??  /  2-11 강의 10분쯤
+
+파이썬 클래스 안에 클래스 넣는 것은? 상속받는 의미?? 무슨 의미가 있음??
+
+./test.sh 하고 터미널 키 안먹는 것은 왜 그럼?
+
+파이참 기능 스크래치 파일 만들기??? 어떻게 함??
+
+django 쓰지 않고 mysql 서버에서 datetime 의 default 값을 사용하는 방법
+테이블 모더파이해서 DATETIME DEFAULT 에 CURRENT_TIMESTAMP 입력해주기
+
+
+
+*장고 스텁이 맨 하단 like_set 을 해서 mypy 없이도 잘 되게 함?
+    def test_like_count_should_increase(self) -> None:
+        # Given
+        user = User.objects.create(name="test")
+        article = Article.objects.create(title="test_title")
+
+        # When
+        do_like(user.id, article.id)
+
+        # Then
+        article = Article.objects.get(id=article.id)
+        self.assertEqual(1, article.like_set.count())
+                               like가 포린키로 아티클을 가리킴
+
+like_set 은 장고가 알아서 해줬다는데 어느 부분을 기준으로 like_set이 생긴거임??
+
+
+*3-2 2분 15초
+# Then
+        with self.assertRaises(Like.DoesNotExist):
+            Like.objects.filter(id=like.id).get()
+겟을 해서 하나의 오브젝트 모델을 가져오려는데 아무것도 조회가 안 될 때 DoesNotExist 에러가 발생함
+
+

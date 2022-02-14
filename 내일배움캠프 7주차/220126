@@ -1,0 +1,60 @@
+오늘 오후 9시까지 팀별 약속 정하기
+
+
+
+내일 12시까지 SA 제출
+
+
+
+
+2/9 (수) 오후 12시까지 프로젝트 마무리 및 영상제출 및 발표
+
+
+
+colab 프로 계정 악바리
+
+
+추천시스템
+
+AWS 관련 RDS 강의 꼭 들어보길
+
+AWS - S3 라는 스토리즈 서비스가 있음. 그때 그때 필요할 때만 불러오는 게 가능
+서버 하드 낭비가 안 됨.
+
+
+팀원들과 공통으로 사용할 수 있는 db서버
+
+NOSQL 데이터가 그대로 들어감
+
+SQL은 테이블설정을 해주고 나서야 저장 가능
+
+
+장고랑 데이터베이스 
+
+엠엘옵스(MLOps) 쿠버네티스    ->> RDBMS , RDS
+
+배운거는 기본이고 심화된걸 해라
+
+
+
+
+admin.py에 모델클래스 등록
+
+admin.site.register(Post)
+
+
+ORM db 파이썬 쿼리로 요청해서 RDS에서 응답 받게!
+
+주요 Field Option
+필드옵션 : 필드마다 고유 옵션이 존재, 공통 적용 옵션도 있음
+null (DB 옵션) : DB 필드에 NULL 허용 여부 (디폴트 : False)
+unique (DB 옵션) : 유일성 여부 (디폴트 : False)
+blank : 입력값 유효성 (validation) 검사 시에 empty 값 허용 여부 (디폴트 : False)
+default : 디폴트 값 지정. 값이 지정되지 않았을 때 사용
+verbose_name : 필드 레이블. 지정되지 않으면 필드명이 쓰여짐
+validators : 입력값 유효성 검사를 수행할 함수를 다수 지정
+각 필드마다 고유한 validators 들이 이미 등록되어있기도 함
+예 : 이메일만 받기, 최대길이 제한, 최소길이 제한, 최대값 제한, 최소값 제한 등
+choices (form widget 용) : select box 소스로 사용
+help_text (form widget 용) : 필드 입력 도움말
+auto_now_add : Bool, True 인 경우, 레코드 생성시 현재 시간으로 자동 저장

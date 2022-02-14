@@ -1,0 +1,77 @@
+# ASC ASCENDING  오름차순
+# DESC DESCENDING 내림차순
+
+QuerySet[Article]:   아티클 요소를 갖고있는 쿼리셋
+쿼리셋하고 리스트 차이??
+리스트 슬라이싱 하듯이 쿼리셋 슬라이싱 가능
+[1,2,3][0:2]
+= [1,2]   0번째 인데스요소부터 2개
+
+self.assertEqual
+
+
+3-4 09:35 
+self.assertEqual(1, result_articles[0].like_set.count()) 여기서 like_set가 뭐였음??
+
+콤프리헨션을 두개 썼다고 표현함 콤프리헨션이 뭐임??
+[a.id for a in reversed(articles)],
+[a.id for a in result_articles],
+
+
+
+3-4 테스트하고 커밋하고 푸쉬하는 거까지 하기
+
+
+
+*3-5
+article 은 가져왔지만 like 는 실제로 count() 를 호출하기 전까지 데이터베이스에서 가져오지 않았습니다. 이처럼 “evaluate” 되기 전까지 sql 을 실행하지 않는 것을 `lazy` 하다 라고 부릅니다. 
+`lazy` 의 반대를 `eager` 라고 합니다. (django 에서는 eager loading 을 위해 prefetch 를 사용합니다.)
+
+*3-6
+- prefetch 사용, assertNumQueries() 로 쿼리 횟수 검증하기
+    백엔드의 주요 병목은 데이터베이스 쿼리입니다. 때문에 자신이 작성한 비즈니스 로직이 몇번의 쿼리를 하는지, 쿼리가 시간이 너무 오래 걸리지는 않는지 등을 아는 것이 중요합니다.
+
+*prefetch_related 가 where in 절을 써서 1번 더 추가면 하위에 조회하는 아티클이랑 좋아요 등 조회하는 갯수랑은 상관없이 무조건 2번의 쿼리를 쓴다는 소리??
+select_related는 포린키 관계에서 써야하는 이유??
+
+
+*RDBMS 의 join 이 생소하신 분들도 계실 것 같아서 강의 촬영 이후에 교재 내용을 추가합니다. 도움이 될 만한 영상 & 링크들을 남겨놓겠습니다~
+
+생활코딩 join
+[https://www.opentutorials.org/course/3884](https://www.opentutorials.org/course/3884)
+
+문과 개발자들의 영원한 영웅, egoing 님의 join 강의입니다. 저도 주변 분들에게 자주 추천하는 영상이에요~
+
+sql join 은 벤다이어그램? 이제는 그만!
+[https://velog.io/@public_danuel/sql-join-is-not-venn-diagram](https://velog.io/@public_danuel/sql-join-is-not-venn-diagram)
+
+개인적으로 오랫동안 벤다이어그램을 사용해서 join 을 소개해 왔는데요, ([https://sql-joins.leopard.in.ua/](https://sql-joins.leopard.in.ua/) ) 때문에 저에게 신선한 충격으로 다가온 글입니다. join 에 대해서 한 눈에 보기 쉽게 그림으로 설명되어 있습니다.
+
+sql in 100 seconds
+[https://www.youtube.com/watch?v=zsjvFFKOm3c](https://www.youtube.com/watch?v=zsjvFFKOm3c)
+
+join 은 아니지만 제가 좋아하는 fireship 의 100 seconds 시리즈 입니다.
+
+
+- REST API 관련 양질의 자료 (시간 있으실 때 읽어보세요)
+    
+    *토스트 밋업
+    [https://meetup.toast.com/posts/92](https://meetup.toast.com/posts/92)  
+ 
+    *그런 REST API 로 괜찮은가    
+    [https://www.youtube.com/watch?v=RP_f5dMoHFc](https://www.youtube.com/watch?v=RP_f5dMoHFc)
+    
+    *5분 만에 제대로 설명하는 REST API (니콜라스 선생님) 
+    [https://www.youtube.com/watch?v=4DxHX95Lq2U](https://www.youtube.com/watch?v=4DxHX95Lq2U)
+    
+    *Fireship (2분 40초 까지가 REST 설명입니다.)  
+    [https://www.youtube.com/watch?v=-MTSQjw5DrM](https://www.youtube.com/watch?v=-MTSQjw5DrM)
+    
+    *Microsoft Restful API Guidelines 
+    [https://docs.microsoft.com/ko-kr/azure/architecture/best-practices/api-design](https://docs.microsoft.com/ko-kr/azure/architecture/best-practices/api-design)
+
+
+
+api = NinjaAPI()
+router = Router()
+*위에를 인스턴스화라고 부름.

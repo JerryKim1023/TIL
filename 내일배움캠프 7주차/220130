@@ -1,0 +1,44 @@
+로그인 시도하면 메인으로 
+
+
+리다이렉트 url 
+
+
+@login_required
+
+user_email
+user_phone
+
+정규식으로 @면 email,  -이 들어가면 phone
+
+auth.authenticate(reqeust, phone_number=email_phone, password=password)
+
+
+
+http://127.0.0.1:8000/ = 
+
+파이참 단축키 시프트 + 시프트
+
+
+장고만의 쿼리셋 있음
+
+queryset type
+
+
+user_email = list(UserModel.objects.filter(phone_number=user_email).values('email'))[0]['email']
+1.queryset type
+2.변수값 프린트해서 안에 쿼리값이 어떻게 찍히는지 보고 그 안에 맞는 인덱스값을 넣고
+해당하는 키값을 대괄호로 넣어서 원하는 밸류값을 추출한다.
+
+
+
+
+카카오 로그인 연동
+
+REST API 키	046d90e62bcc4496f71f0dbc804694f8
+
+http://127.0.0.1:8000/login/kakao/callback/
+
+https://developers.kakao.com/sdk/js/kakao.js
+
+
