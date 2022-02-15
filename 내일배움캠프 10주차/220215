@@ -1,0 +1,49 @@
+질문 요령!!!
+
+## 어떤 환경에서(윈도, 맥, 파이썬 버전, nodejs인지 flask인지 등등등)
+## 무엇을 의도하셨는지
+## 그래서 실제로 어떤 코드를 작성하셨는지
+## 그런데 실제로 무엇이 일어났는지 (에러)
+
+
+4-6 end to end 작성했다는데 테스트 글,좋아요 라우터 두개 복붙 하고 실행검사하고 끝
+그래서 end to end가 뭔가요??
+
+*간단하게 e2e 와 unit 을 구분하자면
+ - end to end (e2e) 테스트: api 호출을 해서 테스트하는 것 → `self.client` 를 사용하면 e2e 테스트 입니다. (rule of thumbs)
+ - unit 테스트: 함수 하나, 비즈니스 로직 하나, 작은 단위를 테스트 하는 것 → 서비스를 테스트하면 unit 테스트 입니다.
+
+
+4-8 integrity error?? 4:20
+
+*f 스트링이 헷갈림.... 
+def post_like(request: HttpRequest, like_request: LikeRequest) -> Tuple[int, Like]:
+    try:
+        like = do_like(like_request.user_id, like_request.article_id)
+    except User.DoesNotExist:
+        raise HttpError(404, f"User #{like_request.user_id} Not Found")
+    except Article.DoesNotExist:
+        raise HttpError(404, f"Article #{like_request.article_id} Not Found")
+
+
+
+4-10
+끝에 타봄을 붙이는 이유는?
+python manage.py makemigrations tabom
+python manage.py migrate tabom
+
+
+4-10 5:30 
+def undo_like(user_id: int, article_id: int) -> None:
+    deleted_cnt, _ = Like.objects.filter(user_id=user_id, article_id=article_id).delete()
+    if deleted_cnt:
+        article = Article.objects.filter(id=article_id).get()
+        article.like_count -= 1
+        article.save()
+
+if deleted_cnt 가 1로 되는 이유가 이해가 안 감.
+-->> 같은 유저아디,아티클아디가 있는 경우가 1 아니면 0이라서... 필터에 만족하는 조건이 1이 되는 거라서 1이 됨.
+
+prefetch??
+
+4-10 like_set 사용하다 like_count 모델을 따로 만들어서 한 이유??
