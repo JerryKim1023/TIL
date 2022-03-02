@@ -1,0 +1,81 @@
+
+overflow: hidden;
+
+object-fit: cover;
+
+
+
+display: grid;
+    /*grid-template-columns: 200px 200px 500px;*/
+    /*grid-template-rows: 200px 200px 500px;*/
+    grid-auto-rows: calc(var(--card-height) - var(--header-height)) auto;
+    height: var(--card-height);
+    width: var(--card-width);
+
+
+
+
+        --c-border: var(--card-radius) var(--card-radius) 0 0;
+    --c-width: 100%;
+    --c-height: 100%;
+
+
+
+
+스크롤 해야될 부분 태그에 css속성 맥이기
+overflow: scroll;
+
+
+ajax 는 비동기라서 순서대로 실행이 보장되지 않음.
+
+
+ajax에 
+async:false;
+넣으면 순서대로 실행됨
+
+
+기획을 수정하는 건 개발자의 실력이 드러나는 부분이다
+
+
+input id +='aaa'
+label for='aaa'   하면 인풋과 라벨이 연결되서 라벨을 누르거나 체크해도 인풋이 작동
+
+relative는 absolute의 기준을 잡을 때 씀
+absolute는 relative나 상위position 속성을 기준으로 움직임.
+fixed 는 브라우저를 기준으로 잡힘.
+
+
+
+opacity:1,
+        visibility:visible,
+
+
+
+modal.classList.add("hidden");
+
+#popup > label > div
+
+
+  animation: fadeout 3s;
+  -moz-animation: fadeout 3s; /* Firefox */
+  -webkit-animation: fadeout 3s; /* Safari and Chrome */
+  -o-animation: fadeout 3s; /* Opera */
+
+
+
+
+<div z-index=100>
+	<div modal z-index= 1>
+		label
+	/dev
+	label
+</div>
+
+
+close 버튼 시 다른 것들 예외처리 안 하고
+reload() 가 나쁜 이유?? 튜터님한테 물어보기!
+
+
+
+pip freeze > requirements.txt
+Good Game Well Played
