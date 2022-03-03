@@ -35,7 +35,7 @@ user_email = list(UserModel.objects.filter(phone_number=user_email).values('emai
 
 카카오 로그인 연동
 
-REST API 키	046d90e62bcc4496f71f0dbc804694f8
+REST API 키	
 
 http://127.0.0.1:8000/login/kakao/callback/
 
