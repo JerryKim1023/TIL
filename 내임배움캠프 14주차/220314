@@ -1,0 +1,14 @@
+리퀘스츠 는 사이트 안 들어가도 페이지에 요청해서 값을 가져오는 거.
+
+
+"background-image:url("../img/home_02.png");"
+
+   // Background login Image Js
+    let bgLoginSelector = $("[data-login-bg-img]");
+    bgLoginSelector.each(function (index, elem) {
+      let element = $(elem),
+        bgSource = element.data('bg-img');
+      element.css('background-image', 'url(' + bgSource + ')');
+    });
+
+ data-login-bg-img="../img/home_02.png"
